@@ -1,7 +1,7 @@
 <!-- dj/_sidebar.md -->
 <style>
 .sidebar .sidebar-nav > ul > li {
-    margin: 6px 0 6px 0;
+    margin: 8px 0 8px 0;
     padding: 4px 0 4px 8px;
     box-shadow: 0 0 6px rgb(81 62 96 / 20%);
     border-radius: 1em 0 0 1em;
@@ -73,6 +73,14 @@
     margin: 1em auto;
     width: fit-content;
 }
+.sidebarsubtitle {
+    font-size: 1.25em;
+    font-weight: 600;
+    text-shadow: 0 0 1px rgba(67, 29, 99, 0.2);
+    margin: 1em auto;
+    width: fit-content;
+}
+
 </style>
 
 
@@ -80,4 +88,16 @@
 
 * [首页](dj/README)
 * [降厄详解](dj/降厄)
+* [技改解析](dj/技改)
+* [模拟器使用指南](dj/simulator)
 * [配装参考](dj/equip)
+
+<p style="margin-top: -1.5em; margin-bottom: 1.5em; display: block; border-radius: 0 0 0 2.5em; box-shadow: 0 6px 8px rgb(81 62 96 / 15%);">
+&nbsp;
+</p>
+
+<p class="sidebarsubtitle">「魔盒攻略」</p>
+
+
+* [白皮书](https://www.jx3box.com/bps/107316)
+* [连缘多段宏](https://www.jx3box.com/macro/107317)
