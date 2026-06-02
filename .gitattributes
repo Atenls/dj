@@ -1,0 +1,2 @@
+# Include Markdown pages in GitHub Linguist language statistics.
+*.md linguist-language=Markdown linguist-detectable -linguist-documentation
