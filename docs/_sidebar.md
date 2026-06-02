@@ -3,6 +3,6 @@
 <div style="padding: 0.5em;">
 
 - <a href="#/dj/README">
-<span style="font-size: 16px; color: transparent; background: linear-gradient(135deg, oklch(0.9029 0.0419 213.12), oklch(0.7706 0.1283 190), oklch(0.6471 0.1727 265.46)) text; text-shadow: 0 0 1px rgba(47, 114, 141, 0.2); font-weight: bold;">首页</span></a>
+<span style="font-size: 16px; color: transparent; background: linear-gradient(135deg, oklch(0.7882 0.0814 275), oklch(0.7324 0.1529 307.06), oklch(0.6324 0.1011 315)) text; text-shadow: 0 0 1px rgba(67, 29, 99, 0.2); font-weight: bold;">毒经</span></a>
 
 </div>
