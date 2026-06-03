@@ -30,24 +30,22 @@
     window.$docsify = {
       name: '',
       repo: '',
-      loadNavbar: true,
+      loadNavbar: false,
       loadSidebar: true,
       subMaxLevel: 3,
       homepage: '#/dj/README.md',
-      latex: {
-        inlineMath   : [['$', '$'], ['\\(', '\\)']],
-        displayMath  : [['$$', '$$']],
-      },
       routes: {
       '/:path': '/pages/:path'
       },
+      alias: {
+      '/.*/_sidebar.md': '/_sidebar.md'
+      }
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdmirror.com/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdmirror.com/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdmirror.com/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script src="//cdn.jsdmirror.com/npm/docsify-latex@0"></script>
   <script src="//cdn.jsdmirror.com/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 </body>
 </html>
