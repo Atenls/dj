@@ -90,6 +90,7 @@
 * [降厄详解](dj/降厄)
 * [技改解析](dj/技改)
 * [模拟器使用指南](dj/simulator)
+* [基础数据](dj/base)
 * [配装参考](dj/equip)
 
 <p style="margin-top: -1.5em; margin-bottom: 1.5em; display: block; border-radius: 0 0 0 2.5em; box-shadow: 0 6px 8px rgb(81 62 96 / 15%);">

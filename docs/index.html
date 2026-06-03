@@ -10,18 +10,306 @@
   <link rel="icon" href="https://cdn.jx3box.com/design/vector/school/9.svg">
 </head>
 <style>
-* {
-  font-family: 'PingFang SC', 'SF Pro', 'Hiragino Sans GB', '等线', 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
-  --theme-color: oklch(51.041% 0.16502 310.997);
-}
+  * {
+    font-family: 'PingFang SC', 'SF Pro', 'Hiragino Sans GB', '等线', 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+    --theme-color: oklch(51.041% 0.16502 310.997);
+  }
+  .sidebar {
+    font-size: 16px;
+  }
+  
+  .markdown-section {
+   font-size: 16px;
+    max-width: 1280px;
+  }
 
-.markdown-section {
-  font-size: 16px;
-}
+  .markdown-section code {
+    font-family: 'SF Mono', 'Roboto Mono', Monaco, 'Inter', 'Microsoft YaHei';
+    color: oklch(63.713% 0.17694 311.526);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    border-radius: 4px;
+  }
 
-.sidebar {
-  font-size: 16px;
-}
+  .markdown-section details code {
+    color: oklch(63.713% 0.17694 311.526);
+    background: rgba(230, 228, 235, 0.65);
+    border-radius: 4px;
+  }
+
+  .markdown-section tr:nth-child(2n) {
+    background-color: #fff;
+  }
+
+  .markdown-section td {
+    padding: 3px 6px;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .redtext {
+    color: #f84040; 
+    font-weight: 600;
+  }
+
+  .quote {
+    background: #fbfdff;
+    color: #606974;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px;
+    margin: 0px;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .content-container {
+    border-radius: 1em;
+    padding: 1em;
+    background: rgb(22,7,22);
+    color: rgb(222,222,224);
+    text-align: left;
+    border: 2px solid rgb(36, 0, 90);
+    box-shadow: 0 0 8px rgba(36, 0, 90, 0.75);
+  }
+
+  .box-context {
+    font-size: 16px;
+    font-weight: 500;
+    color: #888;
+    line-height: 1.375;
+    text-align: left;
+    margin: 12px 24px;
+    padding: 12px 0;
+
+    &:hover {
+      color: transparent;
+    }
+
+    @media (max-width: 768px) {
+      margin: 0;
+      padding: 12px 4px;
+    }
+
+  }
+
+  .redbox {
+    background: #fdf4f4;
+    color: #85553e;
+    box-shadow: 0 0 6px #441313a0;
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+  }
+
+  .greenbox {
+    background: #f4fdf7;
+    color: #3e854f;
+    border: 1px solid #40924e;
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+  }
+
+  .bluebox {
+    background: #f2faff;
+    color: #466fa1;
+    border: 1px solid #5b9abe;
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+  }
+
+  .yellowbox {
+    background: #fff9f1;
+    color: #c5985c;
+    border: 1px solid #cfae8f;
+    border-radius: 18px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    margin: 0px;
+  }
+
+  .quote-hl {
+    display: inline-block;
+    background-color:rgb(248, 248, 248);
+    color:rgb(240, 25, 211);
+    border-radius: 3px;
+    margin: 3px;
+    padding: 0px 3px;
+  }
+
+  .markdown-section img {
+    border-radius: 1em;
+    box-shadow: 0 0 0.5em rgba(0,0,0,0.25);
+    overflow: hidden;
+    margin: 0.25em 0;
+    
+    &:not([width]):not([height]) {
+      @media (max-width: 768px) {
+        width: 100%;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .markdown-section figure, .markdown-section p {
+    margin: 0;
+  }
+
+  .little-tips {
+    max-width: 360px;
+    padding: 1em;
+    box-shadow: 0 0 4px #3f9c4380;
+    background: #f8fffa;
+    border-radius: 6px;
+    font-size: 14px;
+    margin: 8px 0;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+
+    &.blue {
+        box-shadow: 0 0 4px #5d8cb6a0;
+        background: #f7fcff;
+    }
+
+    &.purple {
+        box-shadow: 0 0 4px #a45db6a0;
+        background: #fef7ff;
+    }
+  }
+  
+  .inline-tips {
+    position: relative;
+    margin: 5px 7px;
+    padding: 1px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #999;
+    max-width: 750px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 11px;
+      transform: translateY(-50%);
+      width: 5px;
+      height: 20px;
+      background: rgb(180, 180, 180);
+      border-radius: 4px;
+    }
+
+    &:hover::before {
+      content: "";
+      background: rgb(146, 173, 230);
+    }
+  }
+
+  .haste-tag-left {
+    background: #6d4caa;
+    color: #f0f0f0;
+    text-shadow: 0.5px 1px 0.5px rgba(0, 0, 0, 0.25);
+    padding: 2px 4px;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+  }
+
+  .haste-tag-right { 
+    background: #fefcfe;
+    color: #6d4caa;
+    text-shadow: 0.5px 1px 0.5px rgba(0, 0, 0, 0.25);
+    padding: 1px 5px;
+    border: 1px solid #6d4caa;
+    border-radius: 0 4px 4px 0;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .name-tag {
+    background: #faf7f5;
+    padding: 1px 4px;
+    border-radius: 4px;
+    margin: 4px;
+    font-weight: 600;
+    color: #333;
+    box-shadow: 0 0 1px rgba(46, 22, 6, 0.1);
+  }
+
+  .inline-subtitle {
+    font-size: 16.8px;
+    font-weight: 600;
+    padding: 0.75em 0 0.125em;
+  }
+
+  .highlight-purple {
+    font-weight: 600;
+    color: rgba(0,0,0,0.75);
+    padding: 0 4px;
+    border-radius: 20px 20px 10px 10px; 
+    background: linear-gradient(
+      to bottom, 
+      transparent, 
+      transparent 30%, 
+      rgba(228, 212, 248, 0.6) 50%, 
+      rgba(192, 180, 220, 0.5) 100%
+    );
+  }
+
+  .flex-container {
+    display: flex;
+    gap: 1em;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  details[open] {
+    margin: 1em 0;
+    margin-left: -0.5em; 
+    box-shadow: 2px 2px 0.5em rgba(0,0,0,0.2);
+    width: fit-content;
+    border-radius: 0.5em;
+    padding: 0.25em 0.5em;
+
+    & summary {
+      font-weight: 800;
+      padding: 0.25em 0;
+    }
+  }
+
+  details {
+    margin: 0.5em 0;
+    transition: 
+      margin-top 0.25s ease-in-out,
+      margin-bottom 0.25s ease-in-out,
+      padding-top 0.25s ease-in-out,
+      padding-bottom 0.25s ease-in-out;
+  }
+
+  details summary {
+    cursor: pointer;
+    user-select: none;
+  }
 </style>
 
 <body>
