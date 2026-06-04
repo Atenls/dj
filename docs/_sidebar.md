@@ -17,7 +17,8 @@
 
 .app-sub-sidebar li {
     position: relative;
-    padding-left: 1em;
+    padding-left: 1.25em;
+    margin: 2px 0;
 
     &::before { 
         content: "";
@@ -35,6 +36,10 @@
       content: "";
       background: rgb(132, 73, 172);
     }
+}
+
+.app-sub-sidebar li a:hover {
+    color: rgb(132, 73, 172);
 }
 
 .sidebar .sidebar-nav > ul > li > a {
