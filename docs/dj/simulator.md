@@ -30,9 +30,9 @@
 通过 **点击技能** 即可添加技能到循环中的最后一位。当前运行时的技能状态也将显示在此处。
 
 以灵蛊为例：
-<div class="flex-container" style="gap: 1em;">
+<div class="flex-container">
 
-<img src="/dj/img/simc/image-2.png" loading="lazy" width="60px" style="margin: -0.25em 0; border-radius: 6px; box-shadow: 0 0 2px #88888880; border: 1px solid #c0c0c8;">
+<img src="/dj/img/simc/image-2.png" loading="lazy" width="60px" style="border-radius: 6px; box-shadow: 0 0 2px #88888880; border: 1px solid #c0c0c8;">
 
 <div>
 
@@ -75,9 +75,9 @@
 设置为 `低延迟(1-45ms)` 时，实际上会给每个技能都附加 `62.5ms` 。这太固定，无法模拟更多实际情况。
 <span style="color: #999;">(预设档位考虑到普遍的输入延迟、波动等原因，标注比实际的延迟要低。)</span>
 
-<div class="flex-container" style="gap: 0.5em; border-top: 1px solid oklch(0.7353 0.1431 298.47 / 45%); border-bottom: 1px solid oklch(0.7353 0.1431 298.47 / 45%); margin: 0.5em 0;">
+<div class="flex-container" style="border-top: 1px solid oklch(0.7353 0.1431 298.47 / 45%); border-bottom: 1px solid oklch(0.7353 0.1431 298.47 / 45%); margin: 0.5em 0;">
 
-<div style="width: 525px;">
+<div style="width: min(82vw, 525px);">
 
 因此，毒经模拟器提供了一个更符合游戏中真实情况的技能延迟设置：
 
@@ -169,7 +169,7 @@
 
 <img src="/dj/img/simc/save.png" loading="lazy">
 
-这样，你就完成了一次完整的自定义循环构建。开始愉快地赛博木桩尝试吧！
+这样，你就完成了一次完整的自定义循环构建。开始愉快地尝试赛博木桩吧！
 
 ## 模拟器与游戏的底层逻辑
 
