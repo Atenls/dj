@@ -16,7 +16,7 @@ border: 1px solid #8f4caa;
 border-radius: 0 4px 4px 0;
 font-weight: 500;
 font-size: 14px;
-">2026/06/02</span>
+">2026/06/06</span>
 
 ---
 
