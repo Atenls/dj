@@ -167,7 +167,7 @@
 
 你需要自己填写加速档位数值，来避免保存了错误的加速段位以致产生错误的结果。
 
-<img src="/dj/img/simc/save.png" loading="lazy">
+<img src="/dj/img/simc/save.png" loading="lazy" style="padding: 0 11.5px;">
 
 这样，你就完成了一次完整的自定义循环构建。开始愉快地尝试赛博木桩吧！
 

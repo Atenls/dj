@@ -13,13 +13,17 @@
   * {
     font-family: 'PingFang SC', 'SF Pro', 'Hiragino Sans GB', '等线', 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
     --theme-color: oklch(51.041% 0.16502 310.997);
+    --theme-color-light: oklch(58.093% 0.21528 310.622);
+    --theme-color-dark: oklch(37.5% 0.21528 310.622);
+    --theme-color-background: oklch(64.727% 0.05809 315.094);
+
   }
   .sidebar {
     font-size: 16px;
   }
 
   .markdown-section {
-   font-size: 16px;
+    font-size: 16px;
     max-width: 1280px;
   }
 
@@ -42,6 +46,23 @@
 
   .markdown-section td {
     padding: 3px 6px;
+  }
+
+  .markdown-section ul {
+    margin: 0.5em 0;
+    width: fit-content;
+  }
+
+  .info-block {
+    margin: 0.5em 0;
+    padding: 1em 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    width: fit-content;
+  }
+  
+  .markdown-section .info-block ul {
+    margin: 0.1875em 0;
   }
 
   .table-container {
@@ -83,7 +104,7 @@
     font-size: 16px;
     font-weight: 500;
     color: #888;
-    line-height: 1.375;
+    line-height: 1.4375;
     text-align: left;
     margin: 12px 24px;
     padding: 12px 0;
@@ -335,7 +356,6 @@
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdmirror.com/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdmirror.com/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <script src="//cdn.jsdmirror.com/npm/docsify/lib/plugins/zoom-image.min.js"></script>
 </body>
 </html>
