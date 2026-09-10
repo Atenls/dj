@@ -101,7 +101,7 @@
 
 此时你可以通过宏语句
 
-<div style="background: #f8f8f8; color: black; font-family: 'Roboto Mono', Monaco, 'Inter', 'Microsoft YaHei'; padding: 0.5em 1em; margin: 0.5em 0;">
+<div style="background: #f8f8f8; border-left: 0.5em solid rgba(226, 224, 255); color: black; font-family: 'Roboto Mono', Monaco, 'Inter', 'Microsoft YaHei'; padding: 0.5em; margin: 0.5em 0; wrap: auto-wrap;">
 /cast moon=23 千丝
 </div> 
 
@@ -191,7 +191,7 @@
 <tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2783.png" /> 蝎心(DOT)</div></td><td>6218</td><td>6 × 32</td><td></td></tr>
 <tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2785.png" /> 蛇影(DOT)</div></td><td>2296</td><td>6 × 32</td><td></td></tr>
 <tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2786.png" /> 百足(DOT)</div></td><td>12557</td><td>9 × 32</td><td></td></tr>
-<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2784.png" /> 蟾啸(DOT)</div></td><td>2295</td><td>7 × 32</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2784.png" /> 蟾啸(DOT)</div></td><td>2295</td><td>9 × 32</td><td></td></tr>
 <tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/13445.png" /> 释灵(DOT)</div></td><td>37352</td><td>8 × 16</td><td></td></tr>
 </table>
 </div>
