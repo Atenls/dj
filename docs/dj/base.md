@@ -1,6 +1,6 @@
 # 基础数据
 
-<span class="author-tag left">最后更新日期</span><span class="author-tag right">2026/09/09</span> <span class="author-tag blue left">作者</span><span class="author-tag blue right"><img class="u-avatar" src="https://qzapp.qlogo.cn/qzapp/101870778/ED573D7852690E2036AA1E7A17CF3F3D/100">莴苣</span>
+<span class="author-tag left">最后更新日期</span><span class="author-tag right">2026/09/10 <span style="border-left: 1px solid #8f4caa; padding-left: 0.25em;">苍生铸世</span></span> <span class="author-tag blue left">作者</span><span class="author-tag blue right"><img class="u-avatar" src="https://qzapp.qlogo.cn/qzapp/101870778/ED573D7852690E2036AA1E7A17CF3F3D/100">莴苣</span>
 
 ## 加速阈值
 
@@ -148,7 +148,56 @@
 
 ## 技能系数
 
-暂略
+### 直伤
 
-## DOT 相关
+<div class="table-container">
+<table style="font-size: 12pt; width: fit-content; font-family: YuGothicUI; text-align: center; vertical-align: middle; white-space: nowrap; padding: 8px 16px 16px; border-radius: 24px; border: 1px solid #ccc;"><colgroup><col style="width: 150px;" /><col style="width: 100px;" /><col style="width: 150px;" /><col style="width: 60px;" /></colgroup>
+<tr style="height: 24.00pt; font-family: 微软雅黑; border-top: none; ">
+<td style="color: #172436; font-weight: 500; border: none;">技能</td>
+<td style="color: #172436; font-weight: 500; border: none;">技能 ID</td>
+<td style="color: #172436; font-weight: 500; border: none;">实际系数</td>
+<td style="color: #172436; font-weight: 500; border: none;">备注</td>
+</tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2786.png" /> 百足</div></td><td>13472</td><td>0.488163</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2785.png" /> 蛇影</div></td><td>21303</td><td>0.427626</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2783.png" /> 蝎心</div></td><td>9331</td><td>0.396713</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/25006.png" /> 蝎心·尻尾</div></td><td>40198</td><td>0.386409</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/11895.png" /> 千丝·蛛魄</div></td><td>21821</td><td>1.030424</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/14140.png" /> 连缘蛊</div></td><td>25044</td><td>0.141039</td><td>读条每跳</td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/14140.png" /> 连缘蛊·额外</div></td><td>30918</td><td>0.156496<br>0.313635<br>0.470775<br>0.627915<br>0.785054</td><td>尾跳</td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2777.png" /> 蛊毒</div></td><td>18590</td><td>0.010304</td><td>灵蛊</td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/19186.png" /> 降厄</div></td><td>42222</td><td>0.096602</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/25007.png" /> 令怖</div></td><td>42295</td><td>0.041217</td><td>每层</td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2801.png" /> 不鸣</div></td><td>37959</td><td>0.579613</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/11894.png" /> 残香</div></td><td>38456</td><td>0.115923</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/25008.png" /> 虫魄</div></td><td>42277</td><td>0.154564</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="24px" style="border-radius: 0.2em; margin: 0; border: 2px solid rgba(255, 140, 0, 0.5);" src="https://icon.jx3box.com/icon/2783.png" /> 赤蝎</div></td><td>39036</td><td>1.309927</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="24px" style="border-radius: 0.2em; margin: 0; border: 2px solid rgba(255, 140, 0, 0.5);" src="https://icon.jx3box.com/icon/2785.png" /> 蛇影·神兵</div></td><td>25773</td><td>0.038641</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="24px" style="border-radius: 0.2em; margin: 0; border: 2px solid rgba(255, 0, 255, 0.5);" src="https://icon.jx3box.com/icon/12487.png" /> 献祭毒爆</div></td><td>25712</td><td><code>base</code> 1619696</td><td>30700</td></tr>
+</table>
+</div>
 
+### DOT
+
+<div class="table-container">
+<table style="font-size: 12pt; width: fit-content; font-family: YuGothicUI; text-align: center; vertical-align: middle; white-space: nowrap; padding: 8px 16px 16px; border-radius: 24px; border: 1px solid #ccc;">
+<colgroup><col style="width: 150px;" /><col style="width: 100px;" /><col style="width: 150px;" /><col style="width: 60px;" /></colgroup>
+<tr style="height: 24.00pt; font-family: 微软雅黑; border-top: none;">
+<td style="color: #172436; font-weight: 500; border: none;">技能</td>
+<td style="color: #172436; font-weight: 500; border: none;">技能 ID</td>
+<td style="color: #172436; font-weight: 500; border: none;">跳数 / 间隔</td>
+<td style="color: #172436; font-weight: 500; border: none;">单跳系数</td>
+</tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2783.png" /> 蝎心(DOT)</div></td><td>6218</td><td>6 × 32</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2785.png" /> 蛇影(DOT)</div></td><td>2296</td><td>6 × 32</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2786.png" /> 百足(DOT)</div></td><td>12557</td><td>9 × 32</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2784.png" /> 蟾啸(DOT)</div></td><td>2295</td><td>7 × 32</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/13445.png" /> 释灵(DOT)</div></td><td>37352</td><td>8 × 16</td><td></td></tr>
+</table>
+</div>
+
+待更新
+
+### 宠物
+
+待更新
