@@ -1,6 +1,6 @@
 # 基础数据
 
-<span class="author-tag left">最后更新日期</span><span class="author-tag right">2026/09/10 <span style="border-left: 1px solid #8f4caa; padding-left: 0.25em;">苍生铸世</span></span> <span class="author-tag blue left">作者</span><span class="author-tag blue right"><img class="u-avatar" src="https://qzapp.qlogo.cn/qzapp/101870778/ED573D7852690E2036AA1E7A17CF3F3D/100">莴苣</span>
+<span class="author-tag left">最后更新日期</span><span class="author-tag right">2026/09/10 <span style="border-left: 1px solid #8f4caa; padding-left: 0.25em;">苍生铸世</span></span> <span class="author-tag blue left">作者</span><span class="author-tag blue right">莴苣</span>
 
 ## 加速阈值
 

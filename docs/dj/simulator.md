@@ -1,6 +1,6 @@
 # 模拟器使用指北
 
-<span class="author-tag left">最后更新日期</span><span class="author-tag right">2026/06/06</span> <span class="author-tag blue left">作者</span><span class="author-tag blue right"><img class="u-avatar" src="https://qzapp.qlogo.cn/qzapp/101870778/ED573D7852690E2036AA1E7A17CF3F3D/100">莴苣</span>
+<span class="author-tag left">最后更新日期</span><span class="author-tag right">2026/06/06</span> <span class="author-tag blue left">作者</span><span class="author-tag blue right">莴苣</span>
 
 
 毒经模拟器是一个用来模拟循环的工具，其基于 `唐宋` 开发的框架，心法框架迁移由 `蓝团` 完成，具体技能/奇穴实现及后续更新维护由 `莴苣` 负责。
