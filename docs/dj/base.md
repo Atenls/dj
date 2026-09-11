@@ -1,6 +1,6 @@
 # 基础数据
 
-<span class="author-tag left">最后更新日期</span><span class="author-tag right">2026/09/10 <span style="border-left: 1px solid #8f4caa; padding-left: 0.25em;">苍生铸世</span></span> <span class="author-tag blue left">作者</span><span class="author-tag blue right">莴苣</span>
+<span class="author-tag left">最后更新日期</span><span class="author-tag right">2026/09/12 <span style="border-left: 1px solid #8f4caa; padding-left: 0.25em;">苍生铸世</span></span> <span class="author-tag blue left">作者</span><span class="author-tag blue right">莴苣</span>
 
 ## 加速阈值
 
@@ -173,7 +173,6 @@
 <tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/25008.png" /> 虫魄</div></td><td>42277</td><td>0.154564</td><td></td></tr>
 <tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="24px" style="border-radius: 0.2em; margin: 0; border: 2px solid rgba(255, 140, 0, 0.5);" src="https://icon.jx3box.com/icon/2783.png" /> 赤蝎</div></td><td>39036</td><td>1.309927</td><td></td></tr>
 <tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="24px" style="border-radius: 0.2em; margin: 0; border: 2px solid rgba(255, 140, 0, 0.5);" src="https://icon.jx3box.com/icon/2785.png" /> 蛇影·神兵</div></td><td>25773</td><td>0.038641</td><td></td></tr>
-<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="24px" style="border-radius: 0.2em; margin: 0; border: 2px solid rgba(255, 0, 255, 0.5);" src="https://icon.jx3box.com/icon/12487.png" /> 献祭毒爆</div></td><td>25712</td><td><code>base</code> 1619696</td><td>30700</td></tr>
 </table>
 </div>
 
@@ -188,15 +187,13 @@
 <td style="color: #172436; font-weight: 500; border: none;">跳数 / 间隔</td>
 <td style="color: #172436; font-weight: 500; border: none;">单跳系数</td>
 </tr>
-<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2783.png" /> 蝎心(DOT)</div></td><td>6218</td><td>6 × 32</td><td></td></tr>
-<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2785.png" /> 蛇影(DOT)</div></td><td>2296</td><td>6 × 32</td><td></td></tr>
-<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2786.png" /> 百足(DOT)</div></td><td>12557</td><td>9 × 32</td><td></td></tr>
-<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2784.png" /> 蟾啸(DOT)</div></td><td>2295</td><td>9 × 32</td><td></td></tr>
-<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/13445.png" /> 释灵(DOT)</div></td><td>37352</td><td>8 × 16</td><td></td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2783.png" /> 蝎心(DOT)</div></td><td>6218</td><td>6 × 32</td><td>0.076638</td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2785.png" /> 蛇影(DOT)</div></td><td>2296</td><td>6 × 32</td><td>0.061503</td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2786.png" /> 百足(DOT)</div></td><td>12557</td><td>9 × 32</td><td>0.131164</td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/2784.png" /> 蟾啸(DOT)</div></td><td>2295</td><td>9 × 32</td><td>0.077282</td></tr>
+<tr><td><div style="display: flex; align-items: center; justify-content: center; gap: 0.25em;"><img width="20px" style="border-radius: 0.2em; margin: 0;" src="https://icon.jx3box.com/icon/13445.png" /> 释灵(DOT)</div></td><td>37352</td><td>8 × 16</td><td>0.055788</td></tr>
 </table>
 </div>
-
-待更新
 
 ### 宠物
 
