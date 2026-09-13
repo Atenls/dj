@@ -1,22 +1,6 @@
 # 毒理学手札
 
-<span style="
-background: #8f4caa;
-color: #f0f0f0;
-text-shadow: 0.5px 1px 0.5px rgba(0, 0, 0, 0.25);
-padding: 2px 4px;
-border-radius: 4px 0 0 4px;
-font-size: 14px;
-">最后更新日期</span><span style="
-background: #fefcfe;
-color: #8f4caa;
-text-shadow: 0.5px 1px 0.5px rgba(0, 0, 0, 0.25);
-padding: 1px 5px;
-border: 1px solid #8f4caa;
-border-radius: 0 4px 4px 0;
-font-weight: 500;
-font-size: 14px;
-">2026/06/06</span>
+<span class="author-tag left">最后更新日期</span><span class="author-tag right">2026/09/13 <span style="border-left: 1px solid #8f4caa; padding-left: 0.25em;">苍生铸世</span></span> <span class="author-tag blue left">作者</span><span class="author-tag blue right">莴苣</span>
 
 ---
 
