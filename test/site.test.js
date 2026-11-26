@@ -41,18 +41,17 @@ test('only the changed group requires a new password after rotation', async () =
   assert.deepEqual(new Uint8Array(await pack.unlock(1, password)), content);
 });
 
-test('a build restores Markdown, sidebar, CSS and images byte for byte', async t => {
+test('a build stores only the private sidebar, Markdown and images', async t => {
   const root = await mkdtemp(join(tmpdir(), 'dj-site-test-'));
   t.after(() => rm(root, { force: true, recursive: true }));
   const imageDir = join(root, 'dj', 'img', '中文 目录');
   const sidebar = '# [首页](dj/README)\r\n';
-  const css = '\n.markdown-section { color: purple; }\n';
   const markdown = '# 正文\r\n\r\n<img src="/dj/img/中文 目录/图.png">';
   const image = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x00, 0xff]);
 
   await mkdir(imageDir, { recursive: true });
   await Promise.all([
-    writeFile(join(root, 'index.html'), `<style>${css}</style>`),
+    writeFile(join(root, 'shared.css'), '.markdown-section { color: purple; }\n'),
     writeFile(join(root, '_sidebar.md'), sidebar),
     writeFile(join(root, 'dj', 'README.md'), markdown),
     writeFile(join(imageDir, '图.png'), image),
@@ -64,7 +63,7 @@ test('a build restores Markdown, sidebar, CSS and images byte for byte', async t
   assert.deepEqual(result, { pages: 1, images: 1, bytes: pack.length });
   assert.equal(pack.includes(Buffer.from('中文 目录')), false);
   const payload = JSON.parse(gunzipSync(await readPackage(pack).unlock(1, password)));
-  assert.equal(payload.css, css);
+  assert.deepEqual(Object.keys(payload), ['sidebar', 'pages', 'images']);
   assert.equal(payload.sidebar, sidebar);
   assert.equal(payload.pages['dj/README.md'], markdown);
   assert.deepEqual(payload.images['dj/img/中文 目录/图.png'], {

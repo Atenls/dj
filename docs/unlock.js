@@ -62,19 +62,20 @@ function loadScript(file) {
   return loadResource(script);
 }
 
-async function showDocs({ css, sidebar, pages, images }, group) {
-  const theme = document.createElement('link');
-  theme.rel = 'stylesheet';
-  theme.href = new URL('vendor/vue.css', siteRoot);
+async function showDocs({ sidebar, pages, images }, group) {
+  const stylesheets = ['vendor/vue.css', 'shared.css'].map(file => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = new URL(file, siteRoot);
+    return link;
+  });
   try {
-    await loadResource(theme);
+    await Promise.all(stylesheets.map(loadResource));
   } catch (error) {
-    theme.remove();
+    stylesheets.forEach(link => link.remove());
     throw error;
   }
 
-  const style = document.createElement('style');
-  style.textContent = css;
   const sidebarUrl = URL.createObjectURL(new Blob([sidebar], { type: 'text/plain;charset=utf-8' }));
   const imageUrls = new Map();
 
@@ -95,7 +96,6 @@ async function showDocs({ css, sidebar, pages, images }, group) {
       (hook, vm) => {
         hook.afterEach(html => replaceImages(html, vm.route.path, images, imageUrls));
         hook.ready(() => {
-          document.head.append(style);
           gate.remove();
           showWatermark(group);
         });
@@ -111,7 +111,7 @@ async function showDocs({ css, sidebar, pages, images }, group) {
     await loadScript('vendor/docsify.min.js');
   } catch (error) {
     app.remove();
-    theme.remove();
+    stylesheets.forEach(link => link.remove());
     URL.revokeObjectURL(sidebarUrl);
     throw error;
   }

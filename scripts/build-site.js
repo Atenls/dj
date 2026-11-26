@@ -40,18 +40,13 @@ async function collectContent(source, directory, pages, images) {
 }
 
 export async function buildSite(source, output, passwords, dynamic) {
-  const html = await readFile(join(source, 'index.html'), 'utf8');
-  const styles = [...html.matchAll(/<style\b[^>]*>([\s\S]*?)<\/style>/gi)];
-  if (!styles.length) throw new Error('No site styles found in the source index.html.');
-
   const sidebar = await readFile(join(source, '_sidebar.md'), 'utf8');
   const pages = Object.create(null);
   const images = Object.create(null);
   await collectContent(source, 'dj', pages, images);
   if (!pages['dj/README.md']) throw new Error('The source homepage is missing or empty.');
 
-  const css = styles.map(match => match[1]).join('\n');
-  const zipped = gzipSync(JSON.stringify({ css, sidebar, pages, images }));
+  const zipped = gzipSync(JSON.stringify({ sidebar, pages, images }));
   const pack = await seal(zipped, passwords, dynamic);
   const temporary = `${output}.${randomUUID()}.tmp`;
   try {
