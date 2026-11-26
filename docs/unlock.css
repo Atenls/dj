@@ -9,7 +9,6 @@ body:has(.gate) {
   box-sizing: border-box;
   place-items: center;
   background:
-    radial-gradient(ellipse at 50% 43%, #dcd2f72e, transparent 34%),
     radial-gradient(ellipse at 26% 16%, #e8dcfb, transparent 55%),
     radial-gradient(ellipse at 78% 86%, #e6eaff, transparent 49%),
     #faf8fd;
@@ -40,42 +39,19 @@ body:has(.gate) {
 .credential-field {
   display: flex;
   overflow: hidden;
-  border: 1px solid #aa98c665;
-  border-radius: 1.5rem;
-  background: #fbf8ff;
-  box-shadow:
-    inset 0 1px 1px #fff,
-    0 .45rem 1.55rem #49326f21;
+  border: 1px solid #b9aad2;
+  border-radius: 999px;
+  background: rgb(255 255 255 / .75);
 }
 
 .credential-field:focus-within {
   border-color: #7255bd;
-  box-shadow:
-    inset 0 1px 1px #fff,
-    0 0 0 3px #7255bd26,
-    0 .45rem 1.55rem #49326f21;
+  box-shadow: 0 0 0 3px #7255bd26;
 }
 
-@supports (corner-shape: squircle) {
-  .credential-field {
-    corner-shape: squircle;
-  }
-}
-
-@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
-  .credential-field {
-    background: linear-gradient(165deg, #ffffffbc, #f7efff63 60%, #f1eaff94);
-    -webkit-backdrop-filter: blur(16px) saturate(155%);
-    backdrop-filter: blur(16px) saturate(155%);
-  }
-}
-
-@media (prefers-reduced-transparency: reduce) {
-  .credential-field {
-    background: #fbf8ff;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-  }
+.credential-field:has(input[aria-invalid="true"]) {
+  border-color: #a84863;
+  box-shadow: 0 0 0 3px #a8486326;
 }
 
 .gate input,
@@ -104,8 +80,7 @@ body:has(.gate) {
   flex: none;
   min-width: 4rem;
   cursor: pointer;
-  background: linear-gradient(#7356c6, #583da9);
-  box-shadow: inset 0 1px 0 #ffffff4d;
+  background: #6244b5;
   color: white;
   font-weight: 650;
 }
@@ -122,13 +97,6 @@ body:has(.gate) {
 .gate button:disabled {
   cursor: wait;
   opacity: 0.65;
-}
-
-.gate #status {
-  min-height: 1.5em;
-  margin: .65rem 0 0;
-  color: #644b82;
-  font-size: .875rem;
 }
 
 .reader-watermark {

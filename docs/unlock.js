@@ -5,7 +5,6 @@ const gate = document.querySelector('#gate');
 const form = document.querySelector('#unlock-form');
 const passwordInput = document.querySelector('#site-password');
 const submit = form.querySelector('button');
-const status = document.querySelector('#status');
 const siteRoot = new URL('.', import.meta.url);
 
 function pageFile(path) {
@@ -120,56 +119,36 @@ async function showDocs({ css, sidebar, pages, images }, group) {
 
 async function loadPackage() {
   const response = await fetch(new URL('site.pack', siteRoot), { cache: 'no-store' });
-  if (!response.ok) throw new Error('无法下载加密内容，请刷新页面重试。');
-  const bytes = new Uint8Array(await response.arrayBuffer());
-
-  try {
-    return readPackage(bytes);
-  } catch {
-    throw new Error('加密文件无法读取，请刷新页面。');
-  }
+  if (!response.ok) throw new Error('Could not load the encrypted package');
+  return readPackage(new Uint8Array(await response.arrayBuffer()));
 }
 
 async function readSite(pack, password) {
-  let access;
-  try {
-    access = await unlockInput(pack, password);
-  } catch (error) {
-    if (error.name === 'OperationError') throw new Error('密码或 Key 错误，或加密文件已损坏。');
-    throw new Error('加密文件无法读取。');
-  }
-
+  const access = await unlockInput(pack, password);
   const stream = new Blob([access.compressed]).stream().pipeThrough(new DecompressionStream('gzip'));
   return { group: access.group, site: await new Response(stream).json() };
 }
 
-if (!globalThis.crypto?.subtle || !globalThis.DecompressionStream) {
-  status.textContent = '请使用支持解密的现代浏览器，并通过 HTTPS 打开此站。';
-} else {
-  status.textContent = '正在加载加密内容…';
-  let pack;
-  try {
-    pack = await loadPackage();
-    submit.disabled = false;
-    status.textContent = '';
-  } catch (error) {
-    status.textContent = error instanceof TypeError ? '无法连接站点，请刷新页面重试。' : error.message;
-  }
+if (globalThis.crypto?.subtle && globalThis.DecompressionStream) {
+  let pendingPack = loadPackage().catch(() => null);
+  submit.disabled = false;
+  passwordInput.addEventListener('input', () => passwordInput.removeAttribute('aria-invalid'));
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (submit.disabled) return;
 
     const password = passwordInput.value;
     passwordInput.value = '';
+    passwordInput.removeAttribute('aria-invalid');
     submit.disabled = true;
     form.setAttribute('aria-busy', 'true');
-    status.textContent = '正在解锁…';
-
     try {
+      const pack = (await pendingPack) ?? (await loadPackage());
+      pendingPack = Promise.resolve(pack);
       const { group, site } = await readSite(pack, password);
       await showDocs(site, group);
     } catch (error) {
-      status.textContent = error instanceof TypeError ? '无法载入加密站点，请检查网络后重试。' : error.message;
+      if (error.name === 'OperationError') passwordInput.setAttribute('aria-invalid', 'true');
       submit.disabled = false;
       form.removeAttribute('aria-busy');
       passwordInput.focus();
