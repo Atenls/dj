@@ -1,0 +1,132 @@
+body:has(.gate) {
+  color-scheme: light;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 1.5rem 1rem;
+  box-sizing: border-box;
+  place-items: center;
+  background:
+    radial-gradient(ellipse at 26% 16%, #e8dcfb, transparent 55%),
+    radial-gradient(ellipse at 78% 86%, #e6eaff, transparent 49%),
+    #faf8fd;
+  color: #252039;
+  font: 1rem/1.5 system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+.gate {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: .75rem;
+  width: min(100%, 27rem);
+}
+
+.gate .site-mark {
+  display: block;
+  width: clamp(5.5rem, 21vw, 7rem);
+  height: auto;
+  filter: drop-shadow(0 .4rem .8rem #553b9e24);
+}
+
+.gate-panel {
+  box-sizing: border-box;
+  width: 100%;
+  padding: clamp(1.15rem, 5vw, 2rem);
+  border: 1px solid #ffffffd9;
+  border-radius: 1.35rem;
+  background: rgb(255 255 255 / .68);
+  box-shadow: 0 1rem 3.25rem #38245c18;
+  backdrop-filter: blur(14px);
+}
+
+.gate h1 {
+  margin: 0 0 1.4rem;
+  text-align: center;
+  font-size: clamp(1.35rem, 4.5vw, 1.65rem);
+  font-weight: 650;
+  letter-spacing: .06em;
+}
+
+.credential-field {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #b9aad2;
+  border-radius: .8rem;
+  background: rgb(255 255 255 / .75);
+}
+
+.credential-field:focus-within {
+  border-color: #7255bd;
+  box-shadow: 0 0 0 3px #7255bd26;
+}
+
+@supports (corner-shape: squircle) {
+  .gate-panel {
+    border-radius: 2.5rem;
+    corner-shape: squircle;
+  }
+
+  .credential-field {
+    border-radius: 1.35rem;
+    corner-shape: squircle;
+  }
+}
+
+.gate input,
+.gate button {
+  min-height: 3rem;
+  border: 0;
+  padding: .6rem .85rem;
+  font: inherit;
+}
+
+.gate input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  color: inherit;
+  outline: none;
+}
+
+.gate button {
+  flex: none;
+  min-width: 4.25rem;
+  cursor: pointer;
+  background: #6244b5;
+  color: white;
+  font-weight: 650;
+}
+
+.gate button:not(:disabled):hover {
+  background: #53399e;
+}
+
+.gate button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: -4px;
+}
+
+.gate button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.gate #status {
+  min-height: 1.5em;
+  margin: .65rem 0 0;
+  color: #644b82;
+  font-size: .875rem;
+}
+
+.reader-watermark {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
