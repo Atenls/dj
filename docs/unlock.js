@@ -6,7 +6,6 @@ const form = document.querySelector('#unlock-form');
 const passwordInput = document.querySelector('#site-password');
 const submit = form.querySelector('button');
 const status = document.querySelector('#status');
-const defaultPrompt = status?.textContent ?? '';
 const siteRoot = new URL('.', import.meta.url);
 
 function setStatus(message) {
@@ -138,9 +137,16 @@ async function readSite(pack, password) {
 if (globalThis.crypto?.subtle && globalThis.DecompressionStream) {
   let pendingPack = loadPackage().catch(() => null);
   submit.disabled = false;
+  passwordInput.addEventListener('invalid', event => {
+    if (!status || !passwordInput.validity.valueMissing) return;
+    event.preventDefault();
+    passwordInput.setAttribute('aria-invalid', 'true');
+    setStatus('请填写此字段。');
+    passwordInput.focus();
+  });
   passwordInput.addEventListener('input', () => {
     passwordInput.removeAttribute('aria-invalid');
-    if (!submit.disabled) setStatus(defaultPrompt);
+    if (!submit.disabled) setStatus('');
   });
   form.addEventListener('submit', async event => {
     event.preventDefault();

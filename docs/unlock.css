@@ -100,6 +100,7 @@ body:has(.gate) {
 }
 
 .gate #status {
+  min-height: 1.5em;
   margin: .65rem 0 0;
   text-align: center;
   color: #644b82;
