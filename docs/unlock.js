@@ -5,7 +5,13 @@ const gate = document.querySelector('#gate');
 const form = document.querySelector('#unlock-form');
 const passwordInput = document.querySelector('#site-password');
 const submit = form.querySelector('button');
+const status = document.querySelector('#status');
+const defaultPrompt = status?.textContent ?? '';
 const siteRoot = new URL('.', import.meta.url);
+
+function setStatus(message) {
+  if (status) status.textContent = message;
+}
 
 function pageFile(path) {
   if (path === '/') return 'dj/README.md';
@@ -132,7 +138,10 @@ async function readSite(pack, password) {
 if (globalThis.crypto?.subtle && globalThis.DecompressionStream) {
   let pendingPack = loadPackage().catch(() => null);
   submit.disabled = false;
-  passwordInput.addEventListener('input', () => passwordInput.removeAttribute('aria-invalid'));
+  passwordInput.addEventListener('input', () => {
+    passwordInput.removeAttribute('aria-invalid');
+    if (!submit.disabled) setStatus(defaultPrompt);
+  });
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (submit.disabled) return;
@@ -142,16 +151,21 @@ if (globalThis.crypto?.subtle && globalThis.DecompressionStream) {
     passwordInput.removeAttribute('aria-invalid');
     submit.disabled = true;
     form.setAttribute('aria-busy', 'true');
+    setStatus('正在解锁…');
     try {
       const pack = (await pendingPack) ?? (await loadPackage());
       pendingPack = Promise.resolve(pack);
       const { group, site } = await readSite(pack, password);
       await showDocs(site, group);
     } catch (error) {
-      if (error.name === 'OperationError') passwordInput.setAttribute('aria-invalid', 'true');
+      const invalidPassword = error.name === 'OperationError';
+      if (invalidPassword) passwordInput.setAttribute('aria-invalid', 'true');
+      setStatus(invalidPassword ? '访问凭证有误，请重试。' : '无法载入内容，请重试。');
       submit.disabled = false;
       form.removeAttribute('aria-busy');
       passwordInput.focus();
     }
   });
+} else {
+  setStatus('请使用支持解密的浏览器，并通过 HTTPS 打开此站。');
 }

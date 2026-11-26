@@ -99,6 +99,13 @@ body:has(.gate) {
   opacity: 0.65;
 }
 
+.gate #status {
+  margin: .65rem 0 0;
+  text-align: center;
+  color: #644b82;
+  font-size: .875rem;
+}
+
 .reader-watermark {
   position: fixed;
   inset: 0;
