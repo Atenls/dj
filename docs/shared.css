@@ -347,6 +347,31 @@
   }
 }
 
+.log-entry {
+    display: flex;
+    align-items: stretch;
+    margin: 1em 0;
+}
+
+.log-date {
+    display: flex;
+    align-items: center;
+    flex: 0 0 7.5em;
+    color: #888;
+    font-size: 0.875em;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.log-content {
+    flex: 1;
+    min-width: 0;
+    padding: 0.4em 1.25em;
+    border-left: 1px solid #ddd;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
 details[open] {
   margin: 1em 0;
   margin-left: -0.5em;
@@ -373,4 +398,43 @@ details {
 details summary {
   cursor: pointer;
   user-select: none;
+}
+
+.divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    margin: 1em 0;
+}
+
+.divider::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #eee;
+}
+
+.divider > span {
+    position: relative;
+    padding: 0 0.75em;
+    background: #fff;
+    color: #9099a4;
+    white-space: nowrap;
+}
+
+.date { 
+  display: inline-block; 
+  min-width: 46px; 
+  margin-right: 10px; 
+  padding: 0 6px; 
+  border-radius: 6px; 
+  background: #f7f8fa; 
+  color: #8a9099; 
+  font-family: Consolas, monospace; 
+  font-size: 13px; 
+  line-height: 1.8; 
+  text-align: center; 
 }
