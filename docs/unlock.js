@@ -7,6 +7,7 @@ const passwordInput = document.querySelector('#site-password');
 const submit = form.querySelector('button');
 const status = document.querySelector('#status');
 const siteRoot = new URL('.', import.meta.url);
+const publicAssetsPath = new URL('public/assets/', siteRoot).pathname;
 
 function setStatus(message) {
   if (status) status.textContent = message;
@@ -33,6 +34,13 @@ function replaceImages(html, path, images, imageUrls) {
   for (const image of template.content.querySelectorAll('img[src]')) {
     const source = new URL(image.getAttribute('src'), base);
     if (source.origin !== siteRoot.origin) continue;
+
+    // Docsify rewrites Markdown image paths and keeps the original in data-origin.
+    const original = image.dataset.origin ? new URL(image.dataset.origin, base) : source;
+    if (original.origin === siteRoot.origin && original.pathname.startsWith(publicAssetsPath)) {
+      image.src = original.href;
+      continue;
+    }
 
     const pathname = decodeURIComponent(source.pathname);
     const file = pathname.startsWith(siteRoot.pathname)
